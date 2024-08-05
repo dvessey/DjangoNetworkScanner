@@ -5,12 +5,13 @@ from django.shortcuts import render, redirect
 import json
 import nmap
 
-# Create your views here.
+#Home page view
 def index(request):
 
 
     return render(request, 'inventory/home.html')
 
+#Scan form view
 def scan_input(request):
     if request.method == 'POST':
         form = ScanForm(request.POST)
@@ -24,7 +25,7 @@ def scan_input(request):
     return render(request, 'inventory/scan.html', {'form': form})
 
 
-
+#Do the scan view
 def scan(request):
 
     scanner = nmap.PortScanner()
@@ -80,21 +81,17 @@ def scan(request):
 
     print(inventory)
 
-    json_data = json.dumps(inventory, indent=4)
-
     with open("hosts.json", "w") as outfile:
-        outfile.write(json_data)
+        json_data = json.dump(inventory, outfile)
 
-    outfile.closed
 
     return redirect('scan_results')
     
 
 
-
+#View the results of the scan view
 def scan_results(request):
     with open("hosts.json", "r") as f:
         parsed_data = json.load(f) 
-    f.closed
 
-    return JsonResponse(parsed_data)
+    return render(request, 'inventory/results.html', {'results': parsed_data})

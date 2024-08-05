@@ -1,0 +1,24 @@
+{% extends "inventory/base.html" %}
+{% block content %}
+
+    
+        
+   {% for k, v in results.items %}
+           <h1>{{ k }}</h1> 
+        {% for k2, v2 in v.items %}
+
+            {% if k2 == 'ports' %}
+                <p>{{ k2 }}:</p>
+            {% else %}
+                <p>{{ k2 }}: {{ v2 }}</p>
+            {% endif %}
+            
+            {% for k3, v3 in v2.items %}
+                <p>{{ k3 }}: {{ v3 }}</p>
+              
+            {% endfor %}
+        {% endfor %}
+   {% endfor %}
+    
+
+{% endblock content %}

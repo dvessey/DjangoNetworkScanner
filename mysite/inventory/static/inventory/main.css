@@ -1,9 +1,20 @@
 body {
-    background: #fafafa;
-    color: #333;
-    margin-top: 5rem;
+    background-color: #121212;
+    margin-top: 2em;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #444;
+    color: #D7DADC;
+}
+
+p {
+    color: #D7DADC;
+}
+
+label {
+    color: #D7DADC;
+}
+
+.helptext {
+    color: #D7DADC;
 }

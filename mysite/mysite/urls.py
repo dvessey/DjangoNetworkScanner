@@ -19,7 +19,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path("", include("inventory.urls")),
-    #path("scan/", include("inventory.urls")),
-    #path("scan-input/", include("inventory.urls")),
     path('admin/', admin.site.urls),
 ]

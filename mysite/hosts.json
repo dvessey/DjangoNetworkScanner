@@ -1,0 +1,76 @@
+{
+    "192.168.69.1": {
+        "hostname": "Not Found",
+        "state": "up",
+        "ports": {
+            "22": "open",
+            "53": "open",
+            "80": "open",
+            "443": "open"
+        }
+    },
+    "192.168.69.2": {
+        "hostname": "Not Found",
+        "state": "up",
+        "ports": {}
+    },
+    "192.168.69.3": {
+        "hostname": "Not Found",
+        "state": "up",
+        "ports": {
+            "80": "open"
+        }
+    },
+    "192.168.69.4": {
+        "hostname": "Microsoft Windows Server 2008 R2",
+        "state": "up",
+        "type": "general purpose",
+        "ports": {
+            "135": "open",
+            "139": "open",
+            "445": "open",
+            "1042": "open",
+            "1043": "open",
+            "5040": "open",
+            "5357": "open",
+            "7680": "open",
+            "9012": "open",
+            "9013": "open",
+            "49671": "open"
+        }
+    },
+    "192.168.69.6": {
+        "hostname": "Linux 4.5",
+        "state": "up",
+        "type": "general purpose",
+        "ports": {
+            "4000": "open",
+            "7678": "open",
+            "8001": "open",
+            "8002": "open",
+            "8080": "open",
+            "8187": "open",
+            "9080": "open",
+            "9197": "open",
+            "15500": "open",
+            "26101": "open",
+            "38802": "open",
+            "40870": "open",
+            "56759": "open"
+        }
+    },
+    "192.168.69.69": {
+        "hostname": "Linux 2.6.32 - 3.5",
+        "state": "up",
+        "type": "general purpose",
+        "ports": {
+            "22": "open",
+            "514": "open"
+        }
+    },
+    "192.168.69.8": {
+        "hostname": "Not Found",
+        "state": "up",
+        "ports": {}
+    }
+}

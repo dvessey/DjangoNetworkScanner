@@ -40,7 +40,7 @@
         }
     },
     "192.168.69.6": {
-        "hostname": "Linux 4.5",
+        "hostname": "Linux 3.10",
         "state": "up",
         "type": "general purpose",
         "ports": {
@@ -60,9 +60,9 @@
         }
     },
     "192.168.69.69": {
-        "hostname": "Linux 2.6.32 - 3.5",
+        "hostname": "AXIS 210A or 211 Network Camera (Linux 2.6.17)",
         "state": "up",
-        "type": "general purpose",
+        "type": "webcam",
         "ports": {
             "22": "open",
             "514": "open"

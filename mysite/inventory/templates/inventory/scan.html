@@ -1,5 +1,10 @@
-<form action="/scan/" method="POST" novalidate>
-    {% csrf_token %}
-    {{form}}
-<button type="submit">SUBMIT</button>
-</form>
+{% extends "inventory/base.html" %}
+{% block content %}
+
+    <form action="/scan/" method="POST" novalidate>
+        {% csrf_token %}
+        {{form}}
+    <button type="submit">SUBMIT</button>
+    </form>
+
+{% endblock content %}

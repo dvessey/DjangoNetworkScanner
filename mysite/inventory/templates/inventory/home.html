@@ -1,0 +1,7 @@
+{% extends "inventory/base.html" %}
+
+{% block content %}
+    <h1>Welcome!</h1>
+
+    <button onclick="window.location.href={% url 'scan_input' %}">Start Scan</button>
+{% endblock content %}

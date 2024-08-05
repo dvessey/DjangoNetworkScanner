@@ -7,11 +7,9 @@ import nmap
 
 # Create your views here.
 def index(request):
-    with open("hosts.json", "r") as f:
-        parsed_data = json.load(f) 
-    f.closed
 
-    return JsonResponse(parsed_data)
+
+    return render(request, 'inventory/home.html')
 
 def scan_input(request):
     if request.method == 'POST':
@@ -33,7 +31,7 @@ def scan(request):
 
     # Target IP or hostname
     target = request.POST['ip']
-    print("Scanning against target: {}", target)
+    print("Scanning against target: {}".format(target))
 
     # Nmap flags
     # -sS = TCP SYN scan (default scan)
@@ -87,5 +85,16 @@ def scan(request):
     with open("hosts.json", "w") as outfile:
         outfile.write(json_data)
 
-    return redirect('index')
+    outfile.closed
+
+    return redirect('scan_results')
     
+
+
+
+def scan_results(request):
+    with open("hosts.json", "r") as f:
+        parsed_data = json.load(f) 
+    f.closed
+
+    return JsonResponse(parsed_data)
